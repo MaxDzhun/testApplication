@@ -26,7 +26,7 @@ class _ChangeColorState extends State<ChangeColor> {
 
   Color startColor = Colors.white;
 
-  void RandomColor(){
+  void randomColor(){
     setState(() {
       startColor = Color(Random().nextInt(0xffffffff + 1));
     });
@@ -35,7 +35,7 @@ class _ChangeColorState extends State<ChangeColor> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: RandomColor,
+      onTap: randomColor,
       child: Container(
         color: startColor,
         child: Center(
